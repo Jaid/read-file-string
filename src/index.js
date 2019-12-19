@@ -1,23 +1,48 @@
 /** @module read-file-string */
 
-import simpleGit from "simple-git/promise"
+import fsp from "@absolunet/fsp"
+import fss from "@absolunet/fss"
 
 /**
  * @function
- * @param {string} directory Absolute path to a git repository directory
- * @returns {Promise<boolean|null>} `true` if repository is dirty, `false` if repository is clean, `null` if given directory is not a git repository
+ * @param {string} file Path to a file
+ * @returns {Promise<string>} File contents in UTF-8 or null if file could not be read
  * @example
  * import readFileString from "read-file-string"
- * const result = await readFileString("/my/path")
- * result === false
+ * const result = await readFileString("readme.md")
+ * result === "## Hewwo OwO"
  */
-export default async directory => {
-  const gitRepository = simpleGit(directory)
-  const isGitRepository = await gitRepository.checkIsRepo()
-  if (!isGitRepository) {
+export default async file => {
+  const exists = await fsp.pathExists(file)
+  if (!exists) {
     return null
   }
-  const gitStatus = await gitRepository.status()
-  const isDirty = gitStatus.files?.length > 0
-  return isDirty
+  const stat = await fsp.stat(file)
+  if (!stat.isFile()) {
+    return null
+  }
+  const text = await fsp.readFile(file, "utf8")
+  return text
+}
+
+/**
+ * @function
+ * @param {string} file Path to a file
+ * @returns {string} File contents in UTF-8 or null if file could not be read
+ * @example
+ * import {readFileStringSync} from "read-file-string"
+ * const result = readFileStringSync("readme.md")
+ * result === "## Hewwo OwO"
+ */
+export const readFileStringSync = file => {
+  const exists = fss.pathExists(file)
+  if (!exists) {
+    return null
+  }
+  const stat = fss.stat(file)
+  if (!stat.isFile()) {
+    return null
+  }
+  const text = fss.readFile(file, "utf8")
+  return text
 }
