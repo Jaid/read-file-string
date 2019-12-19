@@ -6,7 +6,7 @@ import fss from "@absolunet/fss"
 /**
  * @function
  * @param {string} file Path to a file
- * @returns {Promise<string>} File contents in UTF-8 or null if file could not be read
+ * @returns {Promise<string|null>} File contents in UTF-8 or null if file could not be read
  * @example
  * import readFileString from "read-file-string"
  * const result = await readFileString("readme.md")
@@ -28,7 +28,7 @@ export default async file => {
 /**
  * @function
  * @param {string} file Path to a file
- * @returns {string} File contents in UTF-8 or null if file could not be read
+ * @returns {string|null} File contents in UTF-8 or null if file could not be read
  * @example
  * import {readFileStringSync} from "read-file-string"
  * const result = readFileStringSync("readme.md")
