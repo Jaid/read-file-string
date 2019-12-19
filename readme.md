@@ -6,11 +6,11 @@ Returns file content as a UTF-8 string. Returns null if file does not exist (or 
 ## Installation
 <a href='https://npmjs.com/package/read-file-string'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
 ```bash
-npm install --save read-file-string@^0.1.0
+npm install --save read-file-string@^1.0.0
 ```
 <a href='https://yarnpkg.com/package/read-file-string'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
 ```bash
-yarn add read-file-string@^0.1.0
+yarn add read-file-string@^1.0.0
 ```
 
 
