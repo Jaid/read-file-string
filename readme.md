@@ -16,18 +16,36 @@ yarn add read-file-string@^0.1.0
 
 
 ## Documentation
+
+* [read-file-string](#module_read-file-string)
+    * [module.exports(file)](#exp_module_read-file-string--module.exports) ⇒ <code>Promise.&lt;string&gt;</code> ⏏
+        * [.readFileStringSync(file)](#module_read-file-string--module.exports.readFileStringSync) ⇒ <code>string</code>
+
 **Kind**: Exported function  
-**Returns**: <code>Promise.&lt;(boolean\|null)&gt;</code> - `true` if repository is dirty, `false` if repository is clean, `null` if given directory is not a git repository  
+**Returns**: <code>Promise.&lt;string&gt;</code> - File contents in UTF-8 or null if file could not be read  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| directory | <code>string</code> | Absolute path to a git repository directory |
+| file | <code>string</code> | Path to a file |
 
 **Example**  
 ```javascript
 import readFileString from "read-file-string"
-const result = await readFileString("/my/path")
-result === false
+const result = await readFileString("readme.md")
+result === "## Hewwo OwO"
+```
+**Kind**: static method of [<code>module.exports</code>](#exp_module_read-file-string--module.exports)  
+**Returns**: <code>string</code> - File contents in UTF-8 or null if file could not be read  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| file | <code>string</code> | Path to a file |
+
+**Example**  
+```javascript
+import {readFileStringSync} from "read-file-string"
+const result = readFileStringSync("readme.md")
+result === "## Hewwo OwO"
 ```
 
 
