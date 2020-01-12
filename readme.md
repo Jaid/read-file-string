@@ -1,51 +1,60 @@
 # read-file-string
 
 
-Returns file content as a UTF-8 string. Returns null if file does not exist (or is a directory) instead of throwing an Error.
+<a href="https://raw.githubusercontent.com/Jaid/read-file-string/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/read-file-string?style=flat-square" alt="License"/></a>  
+<a href="https://actions-badge.atrox.dev/Jaid/read-file-string/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fread-file-string%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/read-file-string/commits"><img src="https://img.shields.io/github/commits-since/Jaid/read-file-string/v1.0.1?style=flat-square&logo=github" alt="Commits since v1.0.1"/></a> <a href="https://github.com/Jaid/read-file-string/commits"><img src="https://img.shields.io/github/last-commit/Jaid/read-file-string?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/read-file-string/issues"><img src="https://img.shields.io/github/issues/Jaid/read-file-string?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/read-file-string"><img src="https://img.shields.io/npm/v/read-file-string?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/read-file-string/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/read-file-string?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/read-file-string"><img src="https://img.shields.io/npm/dm/read-file-string?style=flat-square&logo=npm" alt="Downloads"/></a>
+
+**Returns file content as a UTF-8 string. Returns null if file does not exist (or is a directory) instead of throwing an Error.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Installation
-<a href='https://npmjs.com/package/read-file-string'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
+<a href="https://npmjs.com/package/read-file-string"><img src="https://img.shields.io/badge/npm-read--file--string-C23039?style=flat-square&logo=npm" alt="read-file-string on npm"/></a>
 ```bash
 npm install --save read-file-string@^1.0.1
 ```
-<a href='https://yarnpkg.com/package/read-file-string'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
+<a href="https://yarnpkg.com/package/read-file-string"><img src="https://img.shields.io/badge/Yarn-read--file--string-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="read-file-string on Yarn"/></a>
 ```bash
 yarn add read-file-string@^1.0.1
 ```
 
 
 
-## Documentation
 
-* [read-file-string](#module_read-file-string)
-    * [module.exports(file)](#exp_module_read-file-string--module.exports) ⇒ <code>Promise.&lt;(string\|null)&gt;</code> ⏏
-        * [.readFileStringSync(file)](#module_read-file-string--module.exports.readFileStringSync) ⇒ <code>string</code> \| <code>null</code>
 
-**Kind**: Exported function  
-**Returns**: <code>Promise.&lt;(string\|null)&gt;</code> - File contents in UTF-8 or null if file could not be read  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| file | <code>string</code> | Path to a file |
 
-**Example**  
-```javascript
-import readFileString from "read-file-string"
-const result = await readFileString("readme.md")
-result === "## Hewwo OwO"
+
+## Development
+
+
+
+Setting up:
+```bash
+git clone git@github.com:Jaid/read-file-string.git
+cd read-file-string
+npm install
 ```
-**Kind**: static method of [<code>module.exports</code>](#exp_module_read-file-string--module.exports)  
-**Returns**: <code>string</code> \| <code>null</code> - File contents in UTF-8 or null if file could not be read  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| file | <code>string</code> | Path to a file |
-
-**Example**  
-```javascript
-import {readFileStringSync} from "read-file-string"
-const result = readFileStringSync("readme.md")
-result === "## Hewwo OwO"
+Testing:
+```bash
+npm run test:dev
+```
+Testing in production environment:
+```bash
+npm run test
 ```
 
 
@@ -53,7 +62,7 @@ result === "## Hewwo OwO"
 ```text
 MIT License
 
-Copyright © 2019, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
