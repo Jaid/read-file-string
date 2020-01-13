@@ -33,5 +33,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "read-file-string",
-  "description": "Returns file content as a UTF-8 string. Returns null if file does not exist (or is a directory) instead of throwing an Error."
+  "description": "Returns file content as a UTF-8 string. Returns null if file does not exist (or is a directory) instead of throwing an Error.",
+  "funding": "https://github.com/sponsors/jaid"
 }
