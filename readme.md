@@ -1,15 +1,11 @@
 # read-file-string
 
 
-Returns file content as a UTF-8 string. Returns null if file does not exist (or is a directory) instead of throwing an Error.
+<a href="https://raw.githubusercontent.com/jaid/read-file-string/master/license.txt"><img src="https://img.shields.io/github/license/jaid/read-file-string?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor read-file-string"/></a>  
+<a href="https://actions-badge.atrox.dev/jaid/read-file-string/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Fread-file-string%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/read-file-string/commits"><img src="https://img.shields.io/github/commits-since/jaid/read-file-string/v1.0.2?style=flat-square&logo=github" alt="Commits since v1.0.2"/></a> <a href="https://github.com/jaid/read-file-string/commits"><img src="https://img.shields.io/github/last-commit/jaid/read-file-string?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/read-file-string/issues"><img src="https://img.shields.io/github/issues/jaid/read-file-string?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/read-file-string"><img src="https://img.shields.io/npm/v/read-file-string?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/read-file-string/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/read-file-string?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/read-file-string"><img src="https://img.shields.io/npm/dm/read-file-string?style=flat-square&logo=npm" alt="Downloads"/></a>
 
-<a href="https://raw.githubusercontent.com/Jaid/read-file-string/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/read-file-string?style=flat-square&color=success" alt="License"/></a>  
-<a href="https://github.com/Jaid/read-file-string/commits"><img src="https://img.shields.io/github/commits-since/Jaid/read-file-string/v1.0.2?style=flat-square&logo=github&color=success" alt="Commits since v1.0.2"/></a> <a href="https://github.com/Jaid/read-file-string/commits"><img src="https://img.shields.io/github/last-commit/Jaid/read-file-string?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/read-file-string/issues"><img src="https://img.shields.io/github/issues/Jaid/read-file-string?style=flat-square&logo=github&color=red" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/read-file-string"><img src="https://img.shields.io/npm/v/read-file-string?style=flat-square&logo=npm&label=latest%20version&color=success" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/read-file-string/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/read-file-string?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/read-file-string"><img src="https://img.shields.io/npm/dm/read-file-string?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
-
-
-
-
+**Returns file content as a UTF-8 string. Returns null if file does not exist (or is a directory) instead of throwing an Error.**
 
 
 
@@ -27,49 +23,38 @@ yarn add read-file-string@^1.0.2
 
 
 
-<a name="module_read-file-string"></a>
 
-## Reference
 
-* [read-file-string](#module_read-file-string)
-    * [module.exports(file)](#exp_module_read-file-string--module.exports) ⇒ <code>Promise.&lt;(string\|null)&gt;</code> ⏏
-        * [.readFileStringSync(file)](#module_read-file-string--module.exports.readFileStringSync) ⇒ <code>string</code> \| <code>null</code>
 
-<a name="exp_module_read-file-string--module.exports"></a>
 
-### module.exports(file) ⇒ <code>Promise.&lt;(string\|null)&gt;</code> ⏏
-**Kind**: Exported function  
-**Returns**: <code>Promise.&lt;(string\|null)&gt;</code> - File contents in UTF-8 or null if file could not be read  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| file | <code>string</code> | Path to a file |
 
-**Example**  
-```javascript
-import readFileString from "read-file-string"
-const result = await readFileString("readme.md")
-result === "## Hewwo OwO"
+
+
+
+
+
+
+
+
+## Development
+
+
+
+Setting up:
+```bash
+git clone git@github.com:jaid/read-file-string.git
+cd read-file-string
+npm install
 ```
-<a name="module_read-file-string--module.exports.readFileStringSync"></a>
-
-#### module.exports.readFileStringSync(file) ⇒ <code>string</code> \| <code>null</code>
-**Kind**: static method of [<code>module.exports</code>](#exp_module_read-file-string--module.exports)  
-**Returns**: <code>string</code> \| <code>null</code> - File contents in UTF-8 or null if file could not be read  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| file | <code>string</code> | Path to a file |
-
-**Example**  
-```javascript
-import {readFileStringSync} from "read-file-string"
-const result = readFileStringSync("readme.md")
-result === "## Hewwo OwO"
+Testing:
+```bash
+npm run test:dev
 ```
-
-
-
+Testing in production environment:
+```bash
+npm run test
+```
 
 
 ## License
