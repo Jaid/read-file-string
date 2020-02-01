@@ -12,18 +12,43 @@
 
 
 ## Installation
+
 <a href="https://npmjs.com/package/read-file-string"><img src="https://img.shields.io/badge/npm-read--file--string-C23039?style=flat-square&logo=npm" alt="read-file-string on npm"/></a>
+
 ```bash
 npm install --save read-file-string@^1.0.3
 ```
+
 <a href="https://yarnpkg.com/package/read-file-string"><img src="https://img.shields.io/badge/Yarn-read--file--string-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="read-file-string on Yarn"/></a>
+
 ```bash
 yarn add read-file-string@^1.0.3
 ```
 
+<a href="https://github.com/jaid/read-file-string/packages"><img src="https://img.shields.io/badge/GitHub Packages-@jaid/read--file--string-24282e?style=flat-square&logo=github" alt="@jaid/read-file-string on GitHub Packages"/></a>  
+(if [configured properly](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages))
+
+```bash
+npm install --save @jaid/read-file-string@^1.0.3
+```
 
 
 
+## Example
+
+```javascript
+import readFileString from "read-file-string"
+
+readFileString("./doesNotExist.txt").then(result => {
+
+})
+```
+
+Variable `result` will now be:
+
+```javascript
+null
+```
 
 
 
