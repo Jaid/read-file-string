@@ -39,5 +39,17 @@
     "url": "https://github.com/jaid/read-file-string"
   },
   "homepage": "https://github.com/Jaid/read-file-string",
-  "keywords": []
+  "keywords": [
+    "file",
+    "filesystem",
+    "lib",
+    "library",
+    "load-file",
+    "loader",
+    "promise",
+    "read-file",
+    "string",
+    "util",
+    "utility"
+  ]
 }
