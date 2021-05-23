@@ -1,5 +1,9 @@
 import readFileString from "read-file-string"
 
-readFileString("./doesNotExist.txt").then(result => {
+readFileString("./existingFile.txt").then(result => {
+
+})
+
+readFileString("./doesNotExist.txt").then(result2 => {
 
 })
