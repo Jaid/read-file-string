@@ -40,12 +40,21 @@ npm install --save @jaid/read-file-string@^1.1.0
 ```javascript
 import readFileString from "read-file-string"
 
-readFileString("./doesNotExist.txt").then(result => {
+readFileString("./existingFile.txt").then(result => {
+
+})
+
+readFileString("./doesNotExist.txt").then(result2 => {
 
 })
 ```
 
 Variable `result` will be:
+
+```javascript
+the file contents
+```
+Variable `result2` will be:
 
 ```javascript
 null
