@@ -52,7 +52,7 @@ readFileString("./doesNotExist.txt").then(result2 => {
 Variable `result` will be:
 
 ```javascript
-the file contents
+"the file contents"
 ```
 Variable `result2` will be:
 
