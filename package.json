@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
-    "fs-extra": "^8.1.0"
+    "fs-extra": "^10.0.0"
   },
   "devDependencies": {
     "acorn": "^8.2.4",
