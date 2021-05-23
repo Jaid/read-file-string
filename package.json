@@ -3,8 +3,7 @@
   "version": "1.0.4",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
-    "@absolunet/fsp": "^1.7.0",
-    "@absolunet/fss": "^1.7.0"
+    "fs-extra": "^8.1.0"
   },
   "devDependencies": {
     "acorn": "^8.2.4",

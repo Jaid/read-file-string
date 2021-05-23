@@ -1,7 +1,6 @@
 /** @module read-file-string */
 
-import fsp from "@absolunet/fsp"
-import fss from "@absolunet/fss"
+import {pathExists, pathExistsSync, readFile, readFileSync, stat, statSync} from "fs-extra"
 
 /**
  * @function
@@ -13,15 +12,15 @@ import fss from "@absolunet/fss"
  * result === "## Hewwo OwO"
  */
 export default async file => {
-  const exists = await fsp.pathExists(file)
+  const exists = await pathExists(file)
   if (!exists) {
     return null
   }
-  const stat = await fsp.stat(file)
-  if (!stat.isFile()) {
+  const fileStat = await stat(file)
+  if (!fileStat.isFile()) {
     return null
   }
-  const text = await fsp.readFile(file, "utf8")
+  const text = await readFile(file, "utf8")
   return text
 }
 
@@ -35,14 +34,14 @@ export default async file => {
  * result === "## Hewwo OwO"
  */
 export const readFileStringSync = file => {
-  const exists = fss.pathExists(file)
+  const exists = pathExistsSync(file)
   if (!exists) {
     return null
   }
-  const stat = fss.stat(file)
-  if (!stat.isFile()) {
+  const fileStat = statSync(file)
+  if (!fileStat.isFile()) {
     return null
   }
-  const text = fss.readFile(file, "utf8")
+  const text = readFileSync(file, "utf8")
   return text
 }
