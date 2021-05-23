@@ -1,6 +1,6 @@
 {
   "webpackConfigJaid": "nodeLib",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
     "fs-extra": "^8.1.0"
