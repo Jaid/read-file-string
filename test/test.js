@@ -1,4 +1,6 @@
-import path from "path"
+import {expect, it} from "@jest/globals"
+
+import path from "node:path"
 
 const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src")) |> require
 
