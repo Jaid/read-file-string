@@ -1,6 +1,6 @@
 /** @module read-file-string */
 
-import {pathExists, readFile, stat} from "fs-extra"
+import fs from "./lib/esm/fs-extra.js"
 
 /**
  * @function
@@ -12,14 +12,14 @@ import {pathExists, readFile, stat} from "fs-extra"
  * result === "## Hewwo OwO"
  */
 export default async file => {
-  const exists = await pathExists(file)
+  const exists = await fs.pathExists(file)
   if (!exists) {
     return null
   }
-  const fileStat = await stat(file)
+  const fileStat = await fs.stat(file)
   if (!fileStat.isFile()) {
     return null
   }
-  const text = await readFile(file, "utf8")
+  const text = await fs.readFile(file, "utf8")
   return text
 }
