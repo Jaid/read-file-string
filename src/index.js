@@ -2,6 +2,8 @@
 
 import fs from "./lib/esm/fs-extra.js"
 
+const encoding = "utf8"
+
 /**
  * @function
  * @param {string} file Path to a file
@@ -20,21 +22,21 @@ const readFileString = async file => {
   if (!fileStat.isFile()) {
     return null
   }
-  const text = await fs.readFile(file, "utf8")
+  const text = await fs.readFile(file, encoding)
   return text
 }
 
 /**
  * @function
  * @param {string} file Path to a file
- * @returns {Promise<string>} File contents in UTF-8 or null if file could not be read
+ * @returns {Promise<string>} File content in UTF-8
  * @example
  * import {readFileStringString} from "read-file-string"
  * const result = await readFileString("readme.md")
  * result === "# Hewwo OwO"
  */
 const readFileStringStrict = async file => {
-  const text = await fs.readFile(file, "utf8")
+  const text = await fs.readFile(file, encoding)
   return text
 }
 
