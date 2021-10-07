@@ -9,7 +9,7 @@ const indexPath = process.env.MAIN ? path.resolve(dirName, "..", process.env.MAI
 /**
  * @type { import("../src") }
  */
-const {default: readFileString} = await import(indexPath)
+const {readFileString} = await import(indexPath)
 
 it("should return string", async () => {
   const file = path.join(dirName, "..", "readme.md")
