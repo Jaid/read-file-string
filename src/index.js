@@ -41,5 +41,25 @@ const readFileStringStrict = async file => {
 }
 
 export {readFileString}
+
+/**
+ * @function
+ * @param {string} file Path to a file
+ * @returns {Promise<string>} File content in UTF-8
+ * @example
+ * import {readFileStringString} from "read-file-string"
+ * const result = await readFileString("readme.md")
+ * result === "# Hewwo OwO"
+ */
 export {readFileStringStrict}
+
+/**
+ * @function
+ * @param {string} file Path to a file
+ * @returns {Promise<string>} File content in UTF-8
+ * @example
+ * import {readFileStringString} from "read-file-string"
+ * const result = await readFileString("readme.md")
+ * result === "# Hewwo OwO"
+ */
 export default readFileString
