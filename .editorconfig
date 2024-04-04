@@ -5,17 +5,8 @@ charset = utf-8
 end_of_line = lf
 indent_size = 2
 indent_style = space
-insert_final_newline = false
+insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.md]
+[*.{md,hbs,txt}]
 trim_trailing_whitespace = false
-
-[*.txt]
-trim_trailing_whitespace = false
-
-[*.hbs]
-trim_trailing_whitespace = false
-
-[/package.json]
-insert_final_newline = true # npm install rewrites the JSON file with a final newline, so we manually keep them to prevent unneeded stashes
