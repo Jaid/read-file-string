@@ -36,7 +36,6 @@
     "test:debug": "DEBUG=\"$DEBUG,$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
     "prepareActionJest": "npm run build:prod"
   },
-  "webpackConfigJaid": "nodeLib",
   "dependencies": {
     "fs-extra": "^11.2.0"
   },
@@ -49,5 +48,6 @@
     "tsx": "^4.7.1",
     "typescript": "^5.4.3",
     "wireit": "^0.14.4"
-  }
+  },
+  "webpackConfigJaid": "nodeLib"
 }
