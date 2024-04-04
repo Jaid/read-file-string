@@ -1,19 +1,27 @@
 {
-  "webpackConfigJaid": "nodeLib",
+  "name": "read-file-string",
   "version": "1.1.2",
+  "type": "module",
+  "description": "Returns file content as a UTF-8 string. Returns null if file does not exist (or is a directory) instead of throwing an Error.",
+  "keywords": [
+    "file",
+    "filesystem",
+    "lib",
+    "library",
+    "load-file",
+    "loader",
+    "promise",
+    "read-file",
+    "string",
+    "util",
+    "utility"
+  ],
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
-  "dependencies": {
-    "fs-extra": "^11.2.0"
-  },
-  "devDependencies": {
-    "browserslist-config-jaid-node": "^3.0.0",
-    "eslint": "^8.57.0",
-    "eslint-config-jaid": "^8.24.0",
-    "rollup-config-factory": "^0.3.0",
-    "tsconfig-jaid-node": "^8.1.0",
-    "tsx": "^4.7.1",
-    "typescript": "^5.4.3",
-    "wireit": "^0.14.4"
+  "homepage": "https://github.com/Jaid/read-file-string",
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/read-file-string"
   },
   "scripts": {
     "clean": "rimraf dist/",
@@ -28,26 +36,18 @@
     "test:debug": "DEBUG=\"$DEBUG,$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
     "prepareActionJest": "npm run build:prod"
   },
-  "name": "read-file-string",
-  "description": "Returns file content as a UTF-8 string. Returns null if file does not exist (or is a directory) instead of throwing an Error.",
-  "funding": "https://github.com/sponsors/jaid",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jaid/read-file-string"
+  "webpackConfigJaid": "nodeLib",
+  "dependencies": {
+    "fs-extra": "^11.2.0"
   },
-  "homepage": "https://github.com/Jaid/read-file-string",
-  "keywords": [
-    "file",
-    "filesystem",
-    "lib",
-    "library",
-    "load-file",
-    "loader",
-    "promise",
-    "read-file",
-    "string",
-    "util",
-    "utility"
-  ],
-  "type": "module"
+  "devDependencies": {
+    "browserslist-config-jaid-node": "^3.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-jaid": "^8.24.0",
+    "rollup-config-factory": "^0.3.0",
+    "tsconfig-jaid-node": "^8.1.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.3",
+    "wireit": "^0.14.4"
+  }
 }

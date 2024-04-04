@@ -1,9 +1,8 @@
 /** @module read-file-string */
 
-import fs from "./lib/esm/fs-extra.js"
+import fs from './lib/esm/fs-extra.js'
 
-const encoding = "utf8"
-
+const encoding = `utf8`
 /**
  * @function
  * @param {string} file Path to a file
@@ -25,7 +24,6 @@ const readFileString = async file => {
   const text = await fs.readFile(file, encoding)
   return text
 }
-
 /**
  * @function
  * @param {string} file Path to a file
